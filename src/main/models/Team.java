@@ -1,10 +1,32 @@
 package src.main.models;
 
+import java.util.Arrays;
+
 public class Team {
+
+    private String house;
+    private String keeper;
+    private String seeker;
+    private String[] chasers;
+
 
     private static final String POSITION_CHASER = "chaser";
     private static final String POSITION_SEEKER = "seeker";
     private static final String POSITION_KEEPER = "keeper";
+
+    public Team (String house, String keeper, String seeker, String[] chasers){
+        this.house = house;
+        this.keeper = keeper;
+        this.seeker = seeker;
+        this.chasers = Arrays.copyOf(chasers, chasers.length);
+    }
+
+    public Team (Team source){
+        this.house = source.house;
+        this.keeper = source.keeper;
+        this.seeker = source.seeker;
+        this.chasers = Arrays.copyOf(source.chasers, source.chasers.length);
+    }
 
 /* FREQUENTLY ASKED QUESTIONS:
     
