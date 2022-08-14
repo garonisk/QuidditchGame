@@ -72,4 +72,12 @@ public class Team {
          return POSITION_KEEPER;
      }
 
+     public String toString(){
+        return 
+        "House: " + this.house + "\n" +
+        "Keeper: " + this.keeper + "\n" +         
+        "Seeker: "  + this.seeker + "\n" +         
+        "Chasers: " + Arrays.toString(this.chasers) + "\n";
+     }
+
 }
