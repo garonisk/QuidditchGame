@@ -1,12 +1,12 @@
 package src.main;
 import src.main.models.Game;
+import src.main.models.Team;
 
 public class Main {
 
     static Game game;
 
     public static void main(String[] args) {
-
         
     }
 
