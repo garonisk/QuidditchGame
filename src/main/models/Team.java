@@ -83,8 +83,14 @@ public class Team {
          return POSITION_KEEPER;
      }
 
+     
+    //  Testing functions
      public static boolean hasNull(String[] array ){
         return Arrays.stream(array).anyMatch((element) -> element == null);
+     }
+
+     public static boolean hasBlank(String[] array){
+         return Arrays.stream(array).anyMatch((element) -> element.isBlank());
      }
 
      public String toString(){
