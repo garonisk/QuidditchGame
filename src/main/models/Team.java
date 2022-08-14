@@ -28,12 +28,36 @@ public class Team {
         this.chasers = Arrays.copyOf(source.chasers, source.chasers.length);
     }
 
-/* FREQUENTLY ASKED QUESTIONS:
-    
-Question: the constants are final, so why can't we make them public? It's not possible for the caller to update them.
-  Answer: Even if the constant is final, I prefer to expose a method instead of the variable. But if you want to expose the variable, that's also correct.
+    public String getHouse() {
+        return house;
+    }
 
-*/
+    public String getKeeper() {
+        return keeper;
+    }
+
+    public String getSeeker() {
+        return seeker;
+    }
+    public String[] getChasers() {
+        return Arrays.copyOf(chasers, chasers.length) ;
+    }
+
+    public void setHouse(String house) {
+        this.house = house;
+    }
+
+    public void setKeeper(String keeper) {
+        this.keeper = keeper;
+    }
+
+    public void setSeeker(String seeker) {
+        this.seeker = seeker;
+    }
+
+    public void setChasers(String[] chasers) {
+        this.chasers = Arrays.copyOf(chasers, chasers.length);
+    }
 
     
      public static String getPositionChaser() {
