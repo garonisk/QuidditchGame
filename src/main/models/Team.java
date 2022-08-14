@@ -24,6 +24,9 @@ public class Team {
         if (chasers.length != 3){
             throw new IllegalArgumentException("Chasers should be 3");
         }
+        if (hasNull(chasers) || hasBlank(chasers)){
+            throw new IllegalArgumentException("Illegal elements");
+        }
 
 
         this.house = house;
@@ -55,19 +58,31 @@ public class Team {
     }
 
     public void setHouse(String house) {
+        checkParameter(house);
         this.house = house;
     }
 
     public void setKeeper(String keeper) {
+        checkParameter(keeper);
         this.keeper = keeper;
     }
 
     public void setSeeker(String seeker) {
+        checkParameter(seeker);
         this.seeker = seeker;
     }
 
     public void setChasers(String[] chasers) {
+        if (chasers.length != 3 || hasNull(chasers) || hasBlank(chasers)){
+            throw new IllegalArgumentException("illegal chasers arguments");
+        }
         this.chasers = Arrays.copyOf(chasers, chasers.length);
+    }
+
+    public void checkParameter(String param){
+        if (param == null || param.isBlank()){
+            throw new IllegalArgumentException(param + " can not be null or blank");
+        }
     }
 
     
