@@ -83,6 +83,10 @@ public class Team {
          return POSITION_KEEPER;
      }
 
+     public static boolean hasNull(String[] array ){
+        return Arrays.stream(array).anyMatch((element) -> element == null);
+     }
+
      public String toString(){
         return 
         "House: " + this.house + "\n" +
