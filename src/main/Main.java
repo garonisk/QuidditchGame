@@ -9,13 +9,16 @@ public class Main {
 
     public static void main(String[] args) {
 
-        Team home = new Team("GRYFFINDOR", "Oliver", "Harry", new String[] {"Angelina", "Ginny", "Katie"});
-        Team away = new Team("SLYTHERIN" , "Vincent", "Draco", new String[] {"Bridget", "Harper", "Malcolm"});
+        Team home = new Team("GRYFFINDOR", "Oliver", "Harry",
+        new String[] {"Angelina", "Ginny", "Katie"});
+        Team away = new Team("SLYTHERIN" , "Vincent", "Draco", 
+        new String[] {"Bridget", "Harper", "Malcolm"});
         
         Game game = new Game(home, away);
-        System.out.println(game.getScore(home));
-        game.setScore(home, 10);
-        System.out.println(game.getScore(home));
+        Game game2 = new Game(home, away);
+        Game game3 = new Game(home, away);
+
+        System.out.println(Game.getGameCount());
     }
 
 
