@@ -31,6 +31,21 @@ public class GameTest {
         assertEquals("Katie gets the next pass", game.replacePlaceholder("<chaser> gets the next pass", "chaser", "Katie"));
     }
 
+    @Test
+    public void quaffleScoreTest(){
+        Team team = game.getTeam("GRYFFINDOR");
+        game.quaffleScore(team);
+        game.quaffleScore(team);
+        assertEquals(Game.getQuafflePoints() * 2, game.getScore(team));
+    }
+
+    @Test
+    public void catchSnitchTest(){
+        Team team = game.getTeam("SLYTHERIN");
+        game.catchSnitch(team);
+        assertEquals(Game.getSnitchPoints(), game.getScore(team));
+    }
+
 
 
 
